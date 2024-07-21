@@ -160,41 +160,20 @@ const BlogDetail = () => {
                 </div>
               ))
             ) : (
-              <p>No Popular posts available.</p>
+              <p>No Popular posts found.</p>
             )}
           </div>
-          {/* Centered Pagination Component */}
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-4">
             <Pagination
-              page={page}
+              currentPage={page}
               totalPages={totalPages}
-              setPage={setPage}
-              loading={loading}
+              onPageChange={setPage}
             />
           </div>
         </div>
       </div>
-
-      <footer>
-        <img 
-          loading="lazy"
-          src={footer}
-          alt="Footer"
-        />
-        <img className='full bg-cover'
-          loading="lazy"
-          src={footer2}
-          alt="Footer2"
-        />
-      </footer>
-
-      {/* Modal Component */}
-      <Modal show={showModal} onClose={() => setShowModal(false)} />
-
-      {/* Share Button */}
-      <div className="fixed top-1/2 right-0 transform -translate-y-1/2">
-        <img src={share} alt="Share" className="w-12 h-48 cursor-pointer" />
-      </div>
+      <img src={footer2} alt="Footer" className="w-full h-auto mt-8" />
+      <Modal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 };

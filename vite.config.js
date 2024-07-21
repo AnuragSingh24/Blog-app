@@ -5,7 +5,7 @@
 // export default defineConfig({
 //   server:{
 //     proxy:{
-//       '/api':'http://localhost:4000/'
+//       '/api':'http://localhost:5001/'
 //     },
 //   },
 //   plugins: [react()],

@@ -29,7 +29,9 @@ function App() {
       <div className="App">
         <header className="App-header -mt-5 font-[475] text-xl gap-4">
           <nav>
-            <img src={img} alt="Logo" className="logo" />
+          <Link to="/blogs">
+              <img src={img} alt="Logo" className="logo" />
+            </Link>
             <div className="nav-links">
               <Link to="/" className="text-custom-color">Home</Link>
               <Link to="/blogs" className="text-custom-color">Blogs</Link>
